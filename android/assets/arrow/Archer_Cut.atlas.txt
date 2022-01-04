@@ -1,0 +1,13 @@
+
+Archer_Cut.png
+size: 24,209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Archer_Arrow
+  rotate: false
+  xy: 2, 2
+  size: 20, 205
+  orig: 33, 223
+  offset: 6, 10
+  index: -1

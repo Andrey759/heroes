@@ -1,0 +1,181 @@
+
+Archer_Cut.png
+size: 408,516
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Archer_Arm_L_Bottom
+  rotate: true
+  xy: 230, 2
+  size: 97, 54
+  orig: 97, 54
+  offset: 0, 0
+  index: -1
+Archer_Arm_L_Top
+  rotate: true
+  xy: 347, 304
+  size: 81, 56
+  orig: 81, 56
+  offset: 0, 0
+  index: -1
+Archer_Arm_R_Bottom
+  rotate: true
+  xy: 144, 131
+  size: 112, 60
+  orig: 112, 60
+  offset: 0, 0
+  index: -1
+Archer_Arm_R_Top
+  rotate: true
+  xy: 347, 230
+  size: 72, 58
+  orig: 72, 58
+  offset: 0, 0
+  index: -1
+Archer_Armor_Top
+  rotate: true
+  xy: 230, 416
+  size: 98, 121
+  orig: 99, 121
+  offset: 0, 0
+  index: -1
+Archer_Arrow
+  rotate: false
+  xy: 325, 209
+  size: 20, 205
+  orig: 33, 223
+  offset: 6, 10
+  index: -1
+Archer_ArrowBag
+  rotate: true
+  xy: 2, 14
+  size: 83, 226
+  orig: 103, 254
+  offset: 8, 14
+  index: -1
+Archer_Belt_1
+  rotate: false
+  xy: 234, 110
+  size: 76, 20
+  orig: 77, 20
+  offset: 0, 0
+  index: -1
+Archer_Belt_2
+  rotate: true
+  xy: 144, 385
+  size: 129, 83
+  orig: 129, 83
+  offset: 0, 0
+  index: -1
+Archer_Belt_Bag
+  rotate: true
+  xy: 310, 138
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+Archer_Body_Bottom
+  rotate: true
+  xy: 229, 288
+  size: 126, 94
+  orig: 126, 94
+  offset: 0, 0
+  index: -1
+Archer_Body_Top
+  rotate: false
+  xy: 218, 166
+  size: 98, 120
+  orig: 98, 120
+  offset: 0, 0
+  index: -1
+Archer_Bow
+  rotate: false
+  xy: 2, 99
+  size: 140, 415
+  orig: 140, 415
+  offset: 0, 0
+  index: -1
+Archer_Bow_String
+  rotate: true
+  xy: 2, 4
+  size: 8, 165
+  orig: 8, 165
+  offset: 0, 0
+  index: -1
+Archer_Dagger
+  rotate: true
+  xy: 144, 101
+  size: 28, 88
+  orig: 28, 89
+  offset: 0, 1
+  index: -1
+Archer_DaggerBelt_Back
+  rotate: false
+  xy: 169, 2
+  size: 18, 10
+  orig: 18, 10
+  offset: 0, 0
+  index: -1
+Archer_DaggerBelt_Front
+  rotate: false
+  xy: 347, 210
+  size: 30, 18
+  orig: 30, 18
+  offset: 0, 0
+  index: -1
+Archer_DaggerSleve
+  rotate: true
+  xy: 206, 132
+  size: 32, 54
+  orig: 32, 54
+  offset: 0, 0
+  index: -1
+Archer_Dagger_w_sleve
+  rotate: false
+  xy: 342, 10
+  size: 45, 83
+  orig: 45, 83
+  offset: 0, 0
+  index: -1
+Archer_Head
+  rotate: false
+  xy: 345, 95
+  size: 54, 71
+  orig: 54, 71
+  offset: 0, 0
+  index: -1
+Archer_Head_Death
+  rotate: false
+  xy: 286, 37
+  size: 54, 71
+  orig: 54, 71
+  offset: 0, 0
+  index: -1
+Archer_KneePad
+  rotate: true
+  xy: 262, 135
+  size: 29, 46
+  orig: 29, 46
+  offset: 0, 0
+  index: -1
+Archer_Leg_Bottom
+  rotate: false
+  xy: 144, 245
+  size: 72, 138
+  orig: 72, 138
+  offset: 0, 0
+  index: -1
+Archer_Leg_Top
+  rotate: false
+  xy: 353, 387
+  size: 53, 127
+  orig: 53, 127
+  offset: 0, 0
+  index: -1
+Archer_Scarf
+  rotate: false
+  xy: 318, 168
+  size: 85, 39
+  orig: 85, 40
+  offset: 0, 1
+  index: -1

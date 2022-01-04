@@ -1,0 +1,119 @@
+{
+  "skeleton": {
+    "hash": "tO0tDMqqJJW8wHi9hTRD8KLhVVY",
+    "spine": "3.8.99",
+    "x": -178.51,
+    "y": -176.43,
+    "width": 364.42,
+    "height": 359.63,
+    "images": "./images/",
+    "audio": "D:/_FreelancerWorkTemp/GameAnimation_Heroes/_Animation/Archer/images"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "Archer_Arrow",
+      "parent": "root",
+      "length": 347.66,
+      "rotation": 45,
+      "x": -113.13,
+      "y": -113.13
+    }
+  ],
+  "slots": [
+    {
+      "name": "Archer_Arrow",
+      "bone": "Archer_Arrow",
+      "attachment": "Archer_Arrow"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "Archer_Arrow": {
+          "Archer_Arrow": {
+            "x": 165,
+            "y": -0.23,
+            "rotation": 89.49,
+            "width": 66,
+            "height": 446
+          }
+        }
+      }
+    }
+  ],
+  "events": {
+    "End_Flydown": {},
+    "End_Flyup": {}
+  },
+  "animations": {
+    "Arrow_Flyup": {
+      "bones": {
+        "Archer_Arrow": {
+          "rotate": [
+            {
+              "curve": 0.25,
+              "c3": 0.75
+            },
+            {
+              "time": 0.4,
+              "angle": -45
+            }
+          ],
+          "translate": [
+            {
+              "curve": 0.25,
+              "c3": 0.75
+            },
+            {
+              "time": 0.4,
+              "x": -48.56,
+              "y": 114.19
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "time": 0.4,
+          "name": "End_Flyup"
+        }
+      ]
+    },
+    "Arrow_Flyup2": {
+      "bones": {
+        "Archer_Arrow": {
+          "rotate": [
+            {
+              "angle": -45
+            },
+            {
+              "time": 0.4,
+              "angle": -90
+            }
+          ],
+          "translate": [
+            {
+              "x": -48.56,
+              "y": 114.19
+            },
+            {
+              "time": 0.4,
+              "x": -3.86,
+              "y": 228.11
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "time": 0.4,
+          "name": "End_Flydown"
+        }
+      ]
+    }
+  }
+}
