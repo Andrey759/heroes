@@ -10,7 +10,7 @@ enum class Animation(private val atlasPath: String, private val skeletonPath: St
     ARROW("arrow/Archer_Cut.atlas.txt", "arrow/Archer_Cut.json", "default"),
     ;
 
-    private var scale = 0.3F
+    private var scale = 0.25F
     private var timeScale = 0.6F
     private val inaction1 = "inaction1"
     private val inaction2 = "inaction2"
@@ -43,9 +43,9 @@ enum class Animation(private val atlasPath: String, private val skeletonPath: St
 
     fun createComponent(): AnimationComponent {
         val skeleton = Skeleton(skeletonData)
-        skeleton.setPosition(265F, 3 * 125F)
+        skeleton.setPosition(250F, 170F)
         skeleton.setSkin(skin)
-        skeleton.rootBone.scaleX = -1F
+        //skeleton.rootBone.scaleX = -1F
         val state = AnimationState(stateData)
         state.timeScale = timeScale
         state.setAnimation(0, AnimationType.SHOOT.formal, true)

@@ -15,6 +15,7 @@ class HGame : ApplicationListener {
 
     override fun resize(width: Int, height: Int) {
         Common.resize()
+        screen.resize(width, height)
     }
 
     override fun render() {

@@ -4,34 +4,42 @@ import com.badlogic.ashley.core.Engine
 import com.badlogic.ashley.core.Entity
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Screen
-import com.heroes.Context
 import com.heroes.component.BackgroundComponent
 import com.heroes.component.SizeComponent
-import com.heroes.component.TextSupplierComponent
-import com.heroes.component.TextSupplierComponent2
-import com.heroes.dto.BattleDto
-import com.heroes.factory.GridFactory
-import com.heroes.system.BackgroundSystem
-import com.heroes.system.LineSystem
-import com.heroes.system.Text2System
-import com.heroes.system.TextSystem
+import com.heroes.factory.CellFactory
+import com.heroes.service.UpdatePointService
+import com.heroes.system.*
+import com.heroes.util.Animation
 import com.heroes.util.Image
+import kotlin.math.sqrt
 
 class BattleScreen: Screen, Engine() {
+    companion object {
+        val SPACE_LEFT = 60F
+        val SPACE_RIGHT = 60F
+        val SPACE_TOP = 50F
+        val SPACE_BOT = 100F
+        val CAMERA_Z = 548F
+        val CAMERA_Z_2 = CAMERA_Z * CAMERA_Z
+        var FIRST_DIST = sqrt(SPACE_BOT * SPACE_BOT + CAMERA_Z_2)
+    }
 
     init {
+        super.addSystem(UpdatePointService(7, 8))
+
         super.addSystem(BackgroundSystem())
-        super.addSystem(LineSystem())
-        //super.addSystem(AnimationSystem())
+        super.addSystem(BorderSystem())
+        //super.addSystem(LineSystem())
+        super.addSystem(AnimationSystem())
         super.addSystem(TextSystem())
         super.addSystem(Text2System())
 
         super.addEntity(Entity().add(BackgroundComponent(Image.LAND_TAIGA_3.texture())).add(SizeComponent(2048F, 2048F)))
+        CellFactory.getCellList(7, 8).forEach { super.addEntity(it) }
+        //super.addEntity(Entity().add(TextSupplierComponent({ "${Gdx.graphics.width}x${Gdx.graphics.height}" }, 50F, 50F)))
+        super.addEntity(Entity().add(Animation.ARCHER.createComponent()))
 
-        GridFactory().create(BattleDto()).forEach { super.addEntity(it) }
-
-        super.addEntity(Entity().add(TextSupplierComponent({ "${Gdx.graphics.width}x${Gdx.graphics.height}" }, 50F, 50F)))
-        super.addEntity(Entity().add(TextSupplierComponent2(Gdx.graphics.width - 100F, Gdx.graphics.height - 100F)))
+        super.getSystem(UpdatePointService::class.java).update(0F)
     }
 
 
@@ -43,6 +51,7 @@ class BattleScreen: Screen, Engine() {
     }
 
     override fun resize(width: Int, height: Int) {
+        super.getSystem(UpdatePointService::class.java).update(0F)
     }
 
     override fun pause() {

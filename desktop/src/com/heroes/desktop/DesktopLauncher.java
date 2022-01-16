@@ -9,7 +9,6 @@ public class DesktopLauncher {
     public static void main(String[] args) {
         Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
         config.setTitle("Heroes game");
-        //config.setWindowedMode((int) Math.round(1920 * 0.1), (int) Math.round(1080 * 0.2));
         config.setWindowedMode((int) Math.round(1280), (int) Math.round(869));
         new Lwjgl3Application(new HGame(), config);
     }

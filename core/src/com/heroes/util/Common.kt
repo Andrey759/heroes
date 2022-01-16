@@ -31,7 +31,7 @@ class Common {
         fun resize() {
             camera.viewportWidth = Gdx.graphics.width.toFloat()
             camera.viewportHeight = Gdx.graphics.height.toFloat()
-            camera.position.set(Gdx.graphics.width.toFloat() / 2, Gdx.graphics.height.toFloat() / 2, 0F)
+            camera.position.set(camera.viewportWidth / 2, camera.viewportHeight / 2, 0F)
             camera.update()
             batch.projectionMatrix = camera.combined
             animationBatch.projectionMatrix = camera.combined
