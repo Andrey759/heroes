@@ -21,9 +21,9 @@ class UpdatePointService(var rowNum: Int, var colNum: Int) : IteratingSystem(Fam
     CTopPoint::class.java,
     CTopRightPoint::class.java
 ).get()) {
-    //private val H_KOEFF = 0.5744F
-    private val H_KOEFF = 0.7F
-    private val TOP_BOT_KOEFF = 0.3F
+    //private val H_KOEFF = 0.7F
+    private val H_KOEFF = 0.866F
+    private val TOP_BOT_KOEFF = 1 / 3F
 
     init {
         setProcessing(false)
@@ -76,7 +76,7 @@ class UpdatePointService(var rowNum: Int, var colNum: Int) : IteratingSystem(Fam
 
     private fun calculateScreenSize(): ScreenSize {
         val w = 1
-        val h = 1F / (colNum + 0.5F) * H_KOEFF * rowNum
+        val h = 1F / (colNum + 0.5F) * (H_KOEFF * rowNum + TOP_BOT_KOEFF)
         val wth = w / h
         val screenWidth = Gdx.graphics.width - SPACE_LEFT - SPACE_RIGHT
         val screenHeight = Gdx.graphics.height - SPACE_TOP - SPACE_BOT

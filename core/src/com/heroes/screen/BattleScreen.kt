@@ -17,7 +17,7 @@ class BattleScreen: Screen, Engine() {
     companion object {
         val SPACE_LEFT = 60F
         val SPACE_RIGHT = 60F
-        val SPACE_TOP = 50F
+        val SPACE_TOP = 100F
         val SPACE_BOT = 100F
         val CAMERA_Z = 548F
         val CAMERA_Z_2 = CAMERA_Z * CAMERA_Z
