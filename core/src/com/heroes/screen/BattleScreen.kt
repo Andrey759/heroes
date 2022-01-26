@@ -19,9 +19,6 @@ class BattleScreen: Screen, Engine() {
         val SPACE_RIGHT = 60F
         val SPACE_TOP = 100F
         val SPACE_BOT = 100F
-        val CAMERA_Z = 548F
-        val CAMERA_Z_2 = CAMERA_Z * CAMERA_Z
-        var FIRST_DIST = sqrt(SPACE_BOT * SPACE_BOT + CAMERA_Z_2)
     }
 
     init {
@@ -29,7 +26,6 @@ class BattleScreen: Screen, Engine() {
 
         super.addSystem(BackgroundSystem())
         super.addSystem(BorderSystem())
-        //super.addSystem(LineSystem())
         super.addSystem(AnimationSystem())
         super.addSystem(TextSystem())
         super.addSystem(Text2System())
